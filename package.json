@@ -70,5 +70,8 @@
   ],
   "prettier": {
     "singleQuote": true
+  },
+  "overrides": {
+    "graceful-fs": "^4.2.11"
   }
 }
