@@ -18,6 +18,7 @@
     "bem",
     "typography"
   ],
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/cloudfour/drizzle.git"
@@ -27,6 +28,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-handlebars": "^1.0.0",
     "postcss-cli": "^11.0.0"
   },
   "devDependencies": {
@@ -64,6 +66,8 @@
     "prestart": "npm install",
     "start": "eleventy --serve",
     "build": "npm run eleventy",
+    "build:js": "node esbuild.config.js",
+    "watch:js": "node esbuild.config.js --watch",
     "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md",
     "check-lint": "prettier --list-different '**/*.js' && eslint '**/*.js'",
     "lint": "prettier --write '**/*.js' && eslint --fix '**/*.js'"
