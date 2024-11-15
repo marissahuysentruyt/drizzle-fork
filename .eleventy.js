@@ -6,6 +6,9 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/static");
   eleventyConfig.addPassthroughCopy("src/assets");
 
+  // Add watch targets
+  eleventyConfig.addWatchTarget("./src/**/*");
+
   eleventyConfig.setLibrary("hbs", handlebars);
 
   // Add data helper
@@ -18,8 +21,9 @@ export default function(eleventyConfig) {
       input: "src",
       output: "dist",
       includes: "_includes",
-      layouts: "_layouts"
+      layouts: "_layouts",
+      data: "_data",
     }, 
-    templateFormats: ["hbs", "html"],
+    templateFormats: ["hbs", "md", "html"],
   };
 };
