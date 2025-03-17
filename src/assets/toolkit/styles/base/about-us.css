@@ -1,0 +1,6 @@
+@import "/config.css";
+@import "/index.css";
+
+h3 {
+  color: var(--color-fuschia);
+}

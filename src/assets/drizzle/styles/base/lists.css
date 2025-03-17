@@ -1,0 +1,14 @@
+.list {
+  border: 2px dashed hotpink;
+
+  &.list-unordered {
+    background-color: black;
+    color: white;
+  }
+
+  &.list-ordered {
+    border: 4px groove cyan;
+  }
+}
+
+

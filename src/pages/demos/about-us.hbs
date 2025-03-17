@@ -1,0 +1,30 @@
+---
+title: About us 
+notes: This is competitive analysis test.
+layout: default
+---
+
+{{#with (data "about-us")}}
+<header>
+  <h2>{{title}}</h2>
+</header>
+<body>
+  {{{body}}}
+  <br/>
+
+  {{> "patterns.components.button.primary"  text="button text"}}
+  <br/>
+  <br/>
+
+  This is the unordered list:
+  {{> "patterns.components.lists.unordered-list" listItems=unordered}}
+
+  <br/>
+  <br/>
+
+  This is the ordered list:
+  {{> "patterns.components.lists.ordered-list" listItems=ordered}}
+
+</body>   
+{{/with}} 
+
